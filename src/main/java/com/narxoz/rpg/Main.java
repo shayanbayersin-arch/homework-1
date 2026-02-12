@@ -38,7 +38,7 @@ public class Main {
 
         EquipmentFactory ranger = new RangerFactory();
         archer.getStats();
-        System.out.println("Equipped: " + ranger.createWeapon().getWeaponInfo());
-        System.out.println("Defense: " + ranger.createArmor().getArmorInfo());
+        System.out.println(ranger.createWeapon().getWeaponInfo());
+        System.out.println(ranger.createArmor().getArmorInfo());
     }
 }
