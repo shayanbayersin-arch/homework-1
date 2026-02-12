@@ -6,6 +6,7 @@ import com.narxoz.rpg.factory.EquipmentFactory;
 import com.narxoz.rpg.factory.MageFactory;
 import com.narxoz.rpg.factory.MagicFactory;
 import com.narxoz.rpg.factory.MedievalFactory;
+import com.narxoz.rpg.factory.RangerFactory;
 import com.narxoz.rpg.factory.WarriorFactory;
 
 
@@ -13,7 +14,7 @@ public class Main {
     public static void main(String[] args) {
         
 
-        Character warrior = new WarriorFactory().createCharacter("Thorin");
+        Character warrior = new WarriorFactory().createCharacter("Zelda");
         EquipmentFactory medieval = new MedievalFactory();
 
         warrior.getStats();
@@ -22,7 +23,7 @@ public class Main {
         System.out.println(medieval.createArmor().getArmorInfo());
 
 
-        Character mage = new MageFactory().createCharacter("Gandalf");
+        Character mage = new MageFactory().createCharacter("Dinamo");
         EquipmentFactory magic = new MagicFactory();
 
         mage.getStats();
@@ -30,10 +31,14 @@ public class Main {
         System.out.println(magic.createWeapon().getWeaponInfo());
         System.out.println(magic.createArmor().getArmorInfo());
 
-    
 
-        Character archer = new ArcherFactory().createCharacter("Legolas");
+        Character archer = new ArcherFactory().createCharacter("BlackBow");
         archer.getStats();
         archer.useSpecialAbility();
+
+        EquipmentFactory ranger = new RangerFactory();
+        archer.getStats();
+        System.out.println("Equipped: " + ranger.createWeapon().getWeaponInfo());
+        System.out.println("Defense: " + ranger.createArmor().getArmorInfo());
     }
 }
